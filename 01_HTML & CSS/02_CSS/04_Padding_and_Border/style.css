@@ -1,0 +1,13 @@
+.card {
+    color: black;
+    background-color: lightgray;
+    width: 300px;
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+
+    border: 10px dotted white;
+    border-radius: 15px;
+
+    padding: 20px;
+}

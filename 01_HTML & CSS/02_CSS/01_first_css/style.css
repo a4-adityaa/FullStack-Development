@@ -1,0 +1,8 @@
+body{
+    background-color: rgb(0, 255, 251);
+    color: rgb(0, 0, 0);
+    font-size: 50px;
+    font-weight: bold; /* lighter, normal, bold*/
+    text-align: center;
+    margin-top: 10px;
+}
