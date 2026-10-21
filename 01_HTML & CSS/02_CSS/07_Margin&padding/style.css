@@ -1,0 +1,14 @@
+.red-circle {
+    height: 150px;
+    width: 150px;
+    border-radius: 100%;
+    background-color: #bc002d;
+
+    margin:40px 0px 0px 100px;
+    /* margin-top: 40px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    margin-left: 100px; */
+
+    margin: 40px auto;
+}
