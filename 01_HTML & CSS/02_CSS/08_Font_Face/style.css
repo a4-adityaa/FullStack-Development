@@ -1,0 +1,9 @@
+@font-face {
+    font-family: TheGodfather-v2;
+    src: url(TheGodfather-v2.ttf);
+}
+
+h1 {
+    font-family: TheGodfather-v2;
+    letter-spacing: 3px;
+}
