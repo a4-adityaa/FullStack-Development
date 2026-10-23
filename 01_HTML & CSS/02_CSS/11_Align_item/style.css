@@ -1,0 +1,22 @@
+div{
+    border: 8px solid #016a26;
+    height: 260px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+}
+
+h1{
+    width: 60px;
+    height: 60px;
+    margin: 2px;
+    padding: 10px;
+    font-size: 30px;
+    border: 2px solid black;
+    display: flex;             /* Added */
+    justify-content: center;   /* Horizontal centre */
+    align-items: center;       /* Vertical centre */
+    box-sizing: border-box;
+    background: linear-gradient(#14463d, #016a26);
+}

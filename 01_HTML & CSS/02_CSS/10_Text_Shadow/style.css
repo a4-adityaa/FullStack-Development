@@ -1,0 +1,19 @@
+@font-face{
+    font-family: BebasNeue;
+    src: url(BebasNeue.otf);
+}
+
+body {
+    color: white;
+    background: red;
+    font-family: BebasNeue, cursive;
+}
+
+.logo {
+    font-size: 80px;
+    letter-spacing: 4px;
+    text-align: center;
+    margin-top: 40px;
+    text-shadow: 5px      8px      3px      black;
+            /* x-axis|   y-axis|  blur-radius| color*/
+}
