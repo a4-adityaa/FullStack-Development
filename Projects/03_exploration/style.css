@@ -1,6 +1,6 @@
 body{
-    text-align: center;
-    color: #82a5ca;
+  text-align: center;
+  color: #82a5ca;
 
   font-family: "Federant", serif;
   font-weight: 400;
@@ -33,4 +33,7 @@ body{
     background-image: url("galaxy.gif");
     background-size: cover;
     padding: 10px 0 40px 0;
+}
+title{
+  text-shadow: 0px 0px 4px black;
 }
