@@ -1,0 +1,79 @@
+/*Color palette
+red:#e63946
+light:#f1faee
+aqua:#a8dadc
+light-blue:#457b9d
+dark-blue:#1d3557 */
+#hero {
+    background-image: url("background.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+    text-align: center;
+    box-sizing: border-box;
+    padding-top: 100px; /* Changed: dono text neeche aayenge */
+    border-radius: 8px;
+}
+
+#location {
+    color: white;
+    background: #457b9d;
+    font-size: 20px;
+    width: fit-content;
+    margin: 0 auto 10px; /* Changed */
+    padding: 2px 6px;
+    border-radius: 4px;
+}
+
+#location-details {
+    color: white;
+    background: #1d3557;
+    width: 450px;
+    margin: 0 auto;
+    border-radius: 4px;
+}
+
+.activites{
+    display: flex;
+    background-color: #f1faee;
+    text-align: center;
+    flex-direction: column;
+}
+#unique{
+    display: block;
+    align-items: center;
+}
+
+.img{
+    height: 100px;
+    width: 100px;
+    border-radius: 100%;
+}
+.place-img{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.places{
+    width: 150px;
+}
+
+#my-pic{
+    width: 130px;
+    height: 160px;
+    display: block;
+    margin: 0 auto
+}
+
+#guide{
+    margin: 40px auto 20px auto;
+    height: auto;
+    width: 400px;
+    padding: 20px;
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    /* flex-direction: column; */
+    background-color: #457b9d;
+    border-bottom: 4px solid #1d3557;
+}
