@@ -1,0 +1,23 @@
+body{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color:rgba(234, 224, 204, 0.74);
+}
+#hero{
+    margin: 40px;
+    padding: 4px 0 2px 15px;
+    background-color: azure;
+    border-radius: 10px;
+}
+
+#price-el{
+    display: flex;
+    margin-top: -20px;
+    margin-bottom: -20px;
+    text-align: center;
+}
+#price{
+    margin-right: 10px;
+}
+#price-iocn{
+    margin-left: 10px;
+}
