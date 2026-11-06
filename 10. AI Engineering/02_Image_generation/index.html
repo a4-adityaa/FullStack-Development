@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nano Banana Image Studio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="app">
+        <section class="intro" aria-labelledby="page-title">
+            <p class="eyebrow">AI Image Generator</p>
+            <h1 id="page-title">Bring your ideas to life.</h1>
+            <p class="description">
+                Describe the image you want to create and let Gemini turn your idea into an illustration.
+            </p>
+
+            <form id="image-form">
+                <label for="instruction">Your prompt</label>
+                <textarea
+                    id="instruction"
+                    name="instruction"
+                    rows="7"
+                    placeholder="A cozy futuristic cafe floating above a cloud-filled city, cinematic lighting..."
+                    required
+                ></textarea>
+                <button id="submit-btn" type="submit">Generate image</button>
+            </form>
+        </section>
+
+        <section class="preview" aria-labelledby="preview-title">
+            <div class="preview-heading">
+                <h2 id="preview-title">Preview</h2>
+                <span class="status" id="status">Ready</span>
+            </div>
+            <div id="output-img" class="output" aria-live="polite">
+                <div class="placeholder">
+                    <span class="placeholder-icon">✦</span>
+                    <p>Your generated image will appear here.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script type="module" src="index.js"></script>
+</body>
+</html>
