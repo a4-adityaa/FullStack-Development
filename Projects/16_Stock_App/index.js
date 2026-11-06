@@ -2,7 +2,7 @@ import { dates } from './utils/dates.js'
 import { GoogleGenAI } from "@google/genai";
 
 const ai = new GoogleGenAI({
-    apiKey: process.env.GEMINI_API_KEY
+    apiKey: import.meta.env.VITE_GEMINI_API_KEY
 });
 
 const tickersArr = []
@@ -46,7 +46,7 @@ async function fetchStockData() {
     loadingArea.style.display = 'flex'
     try {
         const stockData = await Promise.all(tickersArr.map(async (ticker) => {
-            const url = `https://api.polygon.io/v2/aggs/ticker/${ticker}/range/1/day/${dates.startDate}/${dates.endDate}?apiKey=${process.env.POLYGON_API_KEY}`
+            const url = `https://api.polygon.io/v2/aggs/ticker/${ticker}/range/1/day/${dates.startDate}/${dates.endDate}?apiKey=${import.meta.env.VITE_POLYGON_API_KEY}`
             const response = await fetch(url)
             const data = await response.text()
             const status = await response.status
@@ -65,17 +65,21 @@ async function fetchStockData() {
 }
 
 async function fetchReport(data) {
+    try{
     console.log(data)
-/** 
- * Challenge:
- * 1. Use the OpenAI API to generate a report advising 
- * on whether to buy or sell the shares based on the data 
- * that comes in as a parameter.
- * 
- * 🎁 See hint.md for help!
- * 
- * 🏆 Bonus points: use a try catch to handle errors.
- * **/
+        const response = await ai.models.generateContent({
+            model: 'gemini-3-flash-preview',
+            contents: data,
+            temprature: 1.1,
+            config:{
+                systemInstruction: 'You are a trading guru. Given data on shares prices over the past 3 days, Write a report of no more than 150 words describing tha stacks performance and  recomanding wheather to buy, hold or sell. '
+            }
+        })
+        renderReport(response.text)
+    }catch(err){
+        console.log('Error',err)
+        loadingArea.innerText = 'Unable to access AI, Please refresh and try again.'
+    }
 }
 
 function renderReport(output) {
